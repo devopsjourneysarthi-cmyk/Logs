@@ -1,0 +1,23 @@
+cat > app.log <<EOF
+2026-07-04 05:30:01 INFO  [Application] Application started successfully
+2026-07-04 05:30:03 INFO  [Database] Connecting to PostgreSQL database
+2026-07-04 05:30:04 INFO  [Database] Database connection established
+2026-07-04 05:30:10 DEBUG [AuthService] Validating user credentials for user=john.doe
+2026-07-04 05:30:11 INFO  [AuthService] User login successful: user=john.doe
+2026-07-04 05:31:20 INFO  [OrderService] Processing order ID=ORD1001
+2026-07-04 05:31:22 WARN  [PaymentService] Payment gateway response delayed
+2026-07-04 05:31:25 INFO  [PaymentService] Payment completed for order ID=ORD1001
+2026-07-04 05:32:10 DEBUG [InventoryService] Checking stock for product ID=PRD500
+2026-07-04 05:32:11 INFO  [InventoryService] Stock available: quantity=25
+2026-07-04 05:33:45 INFO  [OrderService] Processing order ID=ORD1002
+2026-07-04 05:33:47 ERROR [PaymentService] Payment failed for order ID=ORD1002: Insufficient funds
+2026-07-04 05:33:48 WARN  [OrderService] Order ID=ORD1002 moved to pending state
+2026-07-04 05:35:12 INFO  [Scheduler] Starting daily backup process
+2026-07-04 05:35:30 INFO  [Scheduler] Backup completed successfully
+2026-07-04 05:36:50 DEBUG [CacheService] Cache refresh initiated
+2026-07-04 05:36:52 INFO  [CacheService] Cache refreshed successfully
+2026-07-04 05:38:10 ERROR [Database] Connection timeout after 30 seconds
+2026-07-04 05:38:15 INFO  [Database] Reconnecting to database
+2026-07-04 05:38:17 INFO  [Database] Database connection restored
+2026-07-04 05:40:00 INFO  [Application] Health check status=UP
+EOF
